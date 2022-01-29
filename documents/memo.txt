@@ -1,0 +1,41 @@
+Laravel Sail を使ったスタートアップ
+https://reffect.co.jp/laravel/laravel-sail
+
+準備:
+- sailコマンドのaliasを.bashrcに追加
+    $ vi ~/.bashrc
+    alias sail='vendor/bin/sail'
+    $ source ~/.bashrc
+
+アプリケーションの作成
+$ cd work
+$ curl -s https://laravel.build/＜好きなapp名＞ | bash
+
+起動
+$ cd ＜好きなapp名＞
+$ sail up    ※-d を付けるとバックグラウンドで実行
+
+稼働状態の確認
+$ sail ps    ※psを付けなくても同じ
+終了
+$ sail down
+
+DBへのmigrate
+$ sail artisan migrate
+
+appコンテナに入る
+$ sail shell
+# php artisan --version
+
+認証パッケージBreezeのインストール
+# composer require laravel/breeze
+# php artisan breeze:install
+# npm install && npm run dev
+※TopPageの右上に Login, Register というリンクが追加される。
+
+mysqlの中を見る
+$ sail mysql
+mysql> show databases;
+mysql> show tables;
+mysql> select * from users;
+mysql> exit
