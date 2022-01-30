@@ -46,4 +46,6 @@ $ sail composer require laravel/ui
 $ sail php artisan ui vue
 $ sail npm install
 $ sail npm install --save vue-router
-$ sail npm run dev
+
+自動ビルド
+$ sail npm run watch
