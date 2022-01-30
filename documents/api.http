@@ -1,11 +1,11 @@
 ### Task一覧
-GET {{$dotenv %baseurl}}/tasks
+GET {{$dotenv %baseurl}}/api/tasks
 
 ### Task詳細
-GET {{$dotenv %baseurl}}/tasks/1
+GET {{$dotenv %baseurl}}/api/tasks/1
 
 ### Task登録
-POST {{$dotenv %baseurl}}/tasks
+POST {{$dotenv %baseurl}}/api/tasks
 X-CSRF-TOKEN: {{$dotenv %csrftoken}}
 
 {
