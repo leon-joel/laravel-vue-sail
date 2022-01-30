@@ -39,3 +39,11 @@ mysql> show databases;
 mysql> show tables;
 mysql> select * from users;
 mysql> exit
+
+------
+
+$ sail composer require laravel/ui
+$ sail php artisan ui vue
+$ sail npm install
+$ sail npm install --save vue-router
+$ sail npm run dev
