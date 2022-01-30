@@ -1,0 +1,15 @@
+### Task一覧
+GET {{$dotenv %baseurl}}/tasks
+
+### Task詳細
+GET {{$dotenv %baseurl}}/tasks/1
+
+### Task登録
+POST {{$dotenv %baseurl}}/tasks
+X-CSRF-TOKEN: {{$dotenv %csrftoken}}
+
+{
+    "title": "new title",
+    "content": "new content",
+    "person_in_charge": "new person_in_charge1"
+}

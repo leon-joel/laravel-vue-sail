@@ -43,9 +43,20 @@ mysql> exit
 ------
 
 $ sail composer require laravel/ui
-$ sail php artisan ui vue
+$ sail php artisan ui vue             ※phpは省略可能。以下同じ。
 $ sail npm install
 $ sail npm install --save vue-router
 
 自動ビルド
 $ sail npm run watch
+
+-----
+
+$ sail artisan make:migration create_tasks_table
+$ sail artisan make:model Task
+$ sail artisan make:seeder TasksTableSeeder
+$ sail artisan migrate --seed
+
+$ sail artisan tinker
+>>> use App\Models\Task;
+>>> Task::all();
